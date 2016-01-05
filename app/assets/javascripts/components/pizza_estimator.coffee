@@ -15,6 +15,9 @@
 		@setState nEaters: nEaters
 
 	calculatePizza: ->
+		@state.pizzas.large = '0 large pizzas'
+		@state.pizzas.medium = '0 medium pizzas'
+		@state.pizzas.small = '0 small pizzas'
 		lgPizzaRem = @state.nEaters % 5
 		if lgPizzaRem == 0
 			@state.pizzas.large = (@state.nEaters / 5) + ' large pizza(s)'
